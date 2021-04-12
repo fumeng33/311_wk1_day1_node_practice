@@ -1,3 +1,6 @@
+
+
+
 const { numbers, strings, dates } = require('../src')
 
 describe('Numbers module', () => {
@@ -58,14 +61,14 @@ describe('Dates module', () => {
     expect(weekdays).toContain(day)
   })
 
-  test('Return today\'s date in the format: May 29, 2019', () => {
+  test('Return today\'s date in the format: March 29, 2021', () => {
     const cal = dates.calendar()
-    expect(cal).toMatch(/^[A-z]{3} [0-9]{2}, [0-9]{4}$/)
+    expect(cal).toMatch(/^[A-z]{5} [0-9]{2}, [0-9]{4}$/)
   })
 
-  test('Return the current time in the format: 03:21:51 PM', () => {
+  test('Return the current time in the format: 3:21:51 PM', () => {
     const time = dates.currentTime()
-    expect(time).toMatch(/^[0-9]{2}:[0-9]{2}:[0-9]{2} [A-Z]{2}$/)
+    expect(time).toMatch(/^[0-9]{1}:[0-9]{2}:[0-9]{2} [A-Z]{2}$/)
   })
 
 })
